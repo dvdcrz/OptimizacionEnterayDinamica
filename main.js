@@ -12,9 +12,31 @@ function preprocesa()
 	alert(oferta)
 	for(i=0;i<entrada[entrada.length-1].length;i++)
 		demanda+=parseInt(entrada[entrada.length-1][i])
-	alert(demanda)	
-	if(oferta<demanda)
-	alert("ola k ase")
-	else 
-	alert("k ase ola")
+	alert(demanda)
+	/*////////////////////////////
+	var prueba=new Array(1,2,3);
+	prueba.splice(prueba.length-1, 0, 4);
+	for(i=0;i<prueba.length;i++)
+		alert(prueba[i]);
+	*//////////////////////////////
+	if(oferta>demanda)
+	{
+		for(i=0;i<entrada.length;i++)
+		{
+			entrada[i].splice(entrada.length-1, 0, 0);
+		}
+		entrada[entrada.length-1][entrada.length-1]=oferta-demanda
+	}
+	else if (oferta<demanda) {
+		entrada.splice(entrada.length-1,0,0);
+		entrada[entrada.length-1].push(0)
+		/*while(5 > entrada[entrada.length-1].length )
+		{
+			entrada[entrada.length-2].push(0)
+		}*/
+	}
+	
+	for(i=0;i<entrada.length;i++)
+	alert(entrada[i])
+	
 }
