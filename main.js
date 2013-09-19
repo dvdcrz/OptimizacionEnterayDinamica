@@ -5,7 +5,7 @@ function preprocesa()
 	for(var i=0;i<entrada.length;i++){
 	  entrada[i]=entrada[i].split(" ")
 	}
-	//entrada=parseInt(entrada)
+	
 	var oferta=demanda=0;
 	for(i=0;i<entrada.length-1;i++)
 		oferta+=parseInt(entrada[i][entrada[i].length-1])
@@ -13,12 +13,7 @@ function preprocesa()
 	for(i=0;i<entrada[entrada.length-1].length;i++)
 		demanda+=parseInt(entrada[entrada.length-1][i])
 	alert(demanda)
-	/*////////////////////////////
-	var prueba=new Array(1,2,3);
-	prueba.splice(prueba.length-1, 0, 4);
-	for(i=0;i<prueba.length;i++)
-		alert(prueba[i]);
-	*//////////////////////////////
+
 	if(oferta>demanda)
 	{
 		for(i=0;i<entrada.length;i++)
@@ -34,6 +29,10 @@ function preprocesa()
 		{
 			entrada[entrada.length-2].push(0)
 		}*/
+	}
+	else
+	{
+		print("ola");
 	}
 	
 	for(i=0;i<entrada.length;i++)
