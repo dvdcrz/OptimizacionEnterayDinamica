@@ -14,10 +14,11 @@ function preprocesa()
 		entrada[i].pop();
 	}
 	alert(ofertaSum)
-	for(i=0;i<entrada[entrada.length-1].length;i++)
+	var tam= entrada.length;
+	for(i=0;i<tam;i++)
 	{
-		demanda.push(parseInt(entrada[entrada.length-1][i]));
-		demandaSum+=parseInt(entrada[entrada.length-1][i]);
+		demanda.push(parseInt(entrada[tam-1][i]));
+		demandaSum+=parseInt(entrada[tam-1][i]);
 		entrada.pop();
 	}
 	alert(demandaSum)
