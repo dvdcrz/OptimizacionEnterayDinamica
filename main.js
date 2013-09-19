@@ -6,7 +6,7 @@ function preprocesa()
 	  entrada[i]=entrada[i].split(" ")
 	}
 	
-	var oferta,demanda,ofertaSum=0, demandaSum=0;
+	var oferta= new Array(),demanda= new Array(),ofertaSum=0, demandaSum=0;
 	for(i=0;i<entrada.length-1;i++)
 	{
 		oferta.push(parseInt(entrada[i][entrada[i].length-1]));
