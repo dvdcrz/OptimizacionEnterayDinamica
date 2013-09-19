@@ -17,8 +17,8 @@ function preprocesa()
 	var tam= entrada.length-1;
 	for(i=0;i<tam;i++)
 	{
-		demanda.push(parseInt(entrada[tam][i]));
-		demandaSum+=parseInt(entrada[tam][i]);
+		demanda.push(parseInt(entrada[entrada.length-1][i]));
+		demandaSum+=parseInt(entrada[entrada.length-1][i]);
 		entrada.pop();
 	}
 	alert(demandaSum)
