@@ -2,50 +2,51 @@ function preprocesa()
 {
 	var entrada = document.getElementById("entrada").value;
 	entrada=entrada.split("\n");
-	for(var i=0;i<entrada.length;i++){
-	  entrada[i]=entrada[i].split(" ")
+	var demanda=entrada[entrada.length-1];
+	demanda=demanda.split(",");
+	entrada.pop();
+	var oferta = new Array();
+	var costos= new Array();
+	for(var i=0; i<entrada.length;i++)
+	{
+		entrada[i]=entrada[i].split("|");
+		oferta.push(entrada[i][1]);
+		costos.push(entrada[i][0]);
+		entrada[i].pop()
 	}
+	for(i=0;i<costos.length;i++)
+	costos[i]=costos[i].split(",");
+
+	var sumOferta=sumDemanda=0;
+	for(var i=0; i<oferta.length;i++)
+		sumOferta+= parseInt(oferta[i]);
+		
+	for(var i=0; i<demanda.length;i++)
+		sumDemanda+= parseInt(demanda[i]);	
+		
+	alert (sumOferta+" "+ sumDemanda);
 	
-	var oferta= new Array(),demanda= new Array(),ofertaSum=0, demandaSum=0;
-	for(i=0;i<entrada.length-1;i++)
+	var equilibrio= sumOferta - sumDemanda
+
+	if(equilibrio==0)
 	{
-		oferta.push(parseInt(entrada[i][entrada[i].length-1]));
-		ofertaSum+=parseInt(entrada[i][entrada[i].length-1]);
-		entrada[i].pop();
-	}
-	alert(ofertaSum)
-	var tam= entrada.length-1;
-	for(i=0;i<tam;i++)
-	{
-		demanda.push(parseInt(entrada[entrada.length-1][i]));
-		demandaSum+=parseInt(entrada[entrada.length-1][i]);
-		entrada.pop();
-	}
-	alert(demandaSum)
-	
-/*
-	if(oferta>demanda)
-	{
-		for(i=0;i<entrada.length;i++)
-		{
-			entrada[i].splice(entrada.length-1, 0, 0);
-		}
-		entrada[entrada.length-1][entrada.length-1]=oferta-demanda
-	}
-	else if (oferta<demanda) {
-		entrada.splice(entrada.length-1,0,0);
-		entrada[entrada.length-1].push(0)
-		/*while(5 > entrada[entrada.length-1].length )
-		{
-			entrada[entrada.length-2].push(0)
-		}
+		alert("problema equilibrado")
 	}
 	else
 	{
-		print("ola");
+		if(equilibrio>0){
+		
+				for(i=0;i<costos.length;i++)
+					costos[i].push(0);
+				demanda.push(equilibrio);
+				alert("oferta excedente")
+		} else{
+		var ceros= new Array();
+		while(ceros.length<costos.length)
+		ceros.push(0);
+		costos.push(ceros)
+		alert("demanda excedente")
+		}
 	}
-*/	
-	for(i=0;i<entrada.length;i++)
-	alert(entrada[i])
-	
+	return(costos,oferta,demanda)
 }

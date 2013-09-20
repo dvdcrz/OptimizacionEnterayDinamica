@@ -14,13 +14,36 @@
   <link rel="stylesheet" href="jquery/jquery-ui.css" />  
   <script src="jquery/jquery-1.9.1.js"></script>
   <script src="jquery/jquery-ui.js"></script>
+
+    <script>
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+ 
+  </script>
 </head>
 
 <body>
-	<div id="pagina">
-		<textarea id="entrada" name="entrada"></textarea>
-		<button type="button" class="btn btn-default btn-lg" onclick="preprocesa()">
-		  <span class="glyphicon glyphicon-airplane"></span> Esquina noroeste
-		</button>
+	<div class="container">
+		<div id="accordion">
+			<h3>Problema de Transporte</h3>
+			<div>
+				<input type="file" title="Search for a file to add">
+				<textarea id="entrada" name="entrada" cols="30" rows="15"></textarea>
+				
+				
+				<div class="btn-group-vertical">
+					<a href="#" class="btn btn-success" onclick="preprocesa()"><i class="icon-white icon-play"></i> Esquina Noroeste</a>
+					<a href="#" class="btn btn-success" onclick="prueba()"><i class="icon-white icon-play"></i> Costos Mínimos</a>
+					<a href="#" class="btn btn-success"><i class="icon-white icon-play"></i> Voguel</a>
+				</div>
+			</div>
+			<h3>Problema de Asignación</h3>
+			<div>
+				<textarea id="asignacion" name="asignacion"></textarea>
+				<a href="#" class="btn btn-success"><i class="icon-white icon-play"></i> Método Húngaro</a>
+			</div>
+		</div>
+		
 	</div>
 </body>
