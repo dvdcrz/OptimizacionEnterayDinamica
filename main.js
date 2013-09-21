@@ -12,7 +12,7 @@ function preprocesa()
 		entrada[i]=entrada[i].split("|");
 		oferta.push(entrada[i][1]);
 		costos.push(entrada[i][0]);
-		entrada[i].pop()
+		entrada[i].pop();
 	}
 	for(i=0;i<costos.length;i++)
 	costos[i]=costos[i].split(",");
@@ -26,11 +26,11 @@ function preprocesa()
 		
 	alert (sumOferta+" "+ sumDemanda);
 	
-	var equilibrio= sumOferta - sumDemanda
+	var equilibrio= sumOferta - sumDemanda;
 
 	if(equilibrio==0)
 	{
-		alert("problema equilibrado")
+		alert("problema equilibrado");
 	}
 	else
 	{
@@ -39,14 +39,15 @@ function preprocesa()
 				for(i=0;i<costos.length;i++)
 					costos[i].push(0);
 				demanda.push(equilibrio);
-				alert("oferta excedente")
+				alert("oferta excedente");
 		} else{
 		var ceros= new Array();
 		while(ceros.length<costos.length)
 		ceros.push(0);
-		costos.push(ceros)
-		alert("demanda excedente")
+		costos.push(ceros);
+		oferta.push(-equilibrio);
+		alert("demanda excedente");
 		}
 	}
-	return(costos,oferta,demanda)
+	
 }
