@@ -21,27 +21,51 @@
   });
  
   </script>
+  
+  <style>
+	div.upload {
+    width: 116px;
+    height: 48px;
+    background: url(img/cargar.jpg);
+    overflow: hidden;
+}
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+  </style>
 </head>
 
 <body>
-	<div class="container">
-		<div id="accordion">
+	<div id="pagina">
+		<div id="accordion" align="center">
 			<h3>Problema de Transporte</h3>
 			<div>
-				<input type="file" title="Search for a file to add">
-				<textarea id="entrada" name="entrada" cols="30" rows="15"></textarea>
-				
-				
+				 <div class="upload">
+					<input type="file" name="upload"/>
+				</div>
+				<div>
+				<textarea id="entrada" name="entrada"  rows="15" cols="20"></textarea>
+				</div>
 				<div class="btn-group-vertical">
 					<a href="#" class="btn btn-success" onclick="preprocesa()"><i class="icon-white icon-play"></i> Esquina Noroeste</a>
-					<a href="#" class="btn btn-success" onclick="prueba()"><i class="icon-white icon-play"></i> Costos Mínimos</a>
+					<a href="#" class="btn btn-success" onclick=""><i class="icon-white icon-play"></i> Costos Mínimos</a>
 					<a href="#" class="btn btn-success"><i class="icon-white icon-play"></i> Voguel</a>
 				</div>
 			</div>
 			<h3>Problema de Asignación</h3>
 			<div>
-				<textarea id="asignacion" name="asignacion"></textarea>
+			 <div class="upload">
+					<input type="file" name="upload"/>
+				</div>
+				<textarea id="asignacion" name="asignacion"  rows="15" cols="20"></textarea>
+				<div>
 				<a href="#" class="btn btn-success"><i class="icon-white icon-play"></i> Método Húngaro</a>
+				</div>
 			</div>
 		</div>
 		
