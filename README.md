@@ -31,3 +31,5 @@ el programa acepta texto de la forma:
 6 , 2 , 6 , 1 | 8<br>
 5 , 5 , 9 , 5 | 7<br>
 9 , 5, 2 , 6
+
+Ejemplo de pull request
