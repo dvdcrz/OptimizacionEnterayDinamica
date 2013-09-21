@@ -33,3 +33,5 @@ el programa acepta texto de la forma:
 9 , 5, 2 , 6
 
 Ejemplo de pull request
+
+Ejemplo de otra rama comit 1
